@@ -26,7 +26,16 @@ func main() {
 		Nome:  "Wesley",
 		Idade: 30,
 		Ativo: true,
+		Endereco: Endereco{
+			Logradouro: "Rua dos bobos",
+			Numero:     0,
+			Cidade:     "São Paulo",
+			Estado:     "SP",
+		},
 	}
+
+	fmt.Printf("Name: %s, Idade %d, Ativo: %t, Endereço: %+v\n", wesley.Nome, wesley.Idade, wesley.Ativo, wesley.Endereco)
+
 	wesley.Ativo = false
 	wesley.Desativar()
 }

@@ -14,10 +14,13 @@ type Pessoa interface {
 }
 
 type Empresa struct {
-	Nome string
+	Nome  string
+	Ativo bool
 }
 
 func (e Empresa) Desativar() {
+	e.Ativo = false
+	fmt.Printf("A empresa %s foi desativada", e.Nome)
 }
 
 type Cliente struct {
@@ -42,7 +45,12 @@ func main() {
 		Idade: 30,
 		Ativo: true,
 	}
-	minhaEmpresa := Empresa{}
+	minhaEmpresa := Empresa{
+		Nome:  "Full Cycle",
+		Ativo: true,
+	}
 
 	Desativacao(minhaEmpresa)
+
+	fmt.Printf("%+v", wesley)
 }
