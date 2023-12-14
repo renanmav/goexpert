@@ -1,1 +1,4 @@
-CEP: 02082-070, Localidade: São Paulo, UF: SP
+{Cep:72302-217 Logradouro:QR 108 Conjunto 15 Complemento: Bairro:Samambaia Sul (Samambaia) Localidade:Brasília Uf:DF Ibge:5300108 Gia: Ddd:61 Siafi:9701}
+{Cep:72302-217 Logradouro:QR 108 Conjunto 15 Complemento: Bairro:Samambaia Sul (Samambaia) Localidade:Brasília Uf:DF Ibge:5300108 Gia: Ddd:61 Siafi:9701}
+{Cep:72302-217 Logradouro:QR 108 Conjunto 15 Complemento: Bairro:Samambaia Sul (Samambaia) Localidade:Brasília Uf:DF Ibge:5300108 Gia: Ddd:61 Siafi:9701}
+{Cep:77062-040 Logradouro:Rua 44 Complemento: Bairro:Jardim Aureny III Localidade:Palmas Uf:TO Ibge:1721000 Gia: Ddd:63 Siafi:9733}
