@@ -38,11 +38,11 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	// p, err := selectProduct(db, product.ID)
-	// if err != nil {
-	// 	panic(err)
-	// }
-	// fmt.Printf("Product: %v, possui o preço de %.2f", p.Name, p.Price)
+	p, err := selectProduct(db, product.ID)
+	if err != nil {
+		panic(err)
+	}
+	fmt.Printf("Product: %v, possui o preço de %.2f", p.Name, p.Price)
 	products, err := selectAllProducts(db)
 	if err != nil {
 		panic(err)
@@ -57,7 +57,7 @@ func main() {
 }
 
 func insertProduct(db *sql.DB, product *Product) error {
-	stmt, err := db.Prepare("insert into products(id, name, price) values(?, ?, ?)")
+	stmt, err := db.Prepare("INSERT INTO products(id, name, price) VALUES (?, ?, ?)")
 	if err != nil {
 		return err
 	}
@@ -70,7 +70,7 @@ func insertProduct(db *sql.DB, product *Product) error {
 }
 
 func updateProduct(db *sql.DB, product *Product) error {
-	stmt, err := db.Prepare("update products set name = ?, price = ? where id = ?")
+	stmt, err := db.Prepare("UPDATE products SET name = ?, price = ? WHERE id = ?")
 	if err != nil {
 		return err
 	}
@@ -83,7 +83,7 @@ func updateProduct(db *sql.DB, product *Product) error {
 }
 
 func selectProduct(db *sql.DB, id string) (*Product, error) {
-	stmt, err := db.Prepare("select id, name, price from products where id = ?")
+	stmt, err := db.Prepare("SELECT id, name, price FROM products WHERE id = ?")
 	if err != nil {
 		return nil, err
 	}
@@ -97,7 +97,7 @@ func selectProduct(db *sql.DB, id string) (*Product, error) {
 }
 
 func selectAllProducts(db *sql.DB) ([]Product, error) {
-	rows, err := db.Query("select id, name, price from products")
+	rows, err := db.Query("SELECT id, name, price FROM products")
 	if err != nil {
 		return nil, err
 	}
@@ -115,7 +115,7 @@ func selectAllProducts(db *sql.DB) ([]Product, error) {
 }
 
 func deleteProduct(db *sql.DB, id string) error {
-	stmt, err := db.Prepare("delete from products where id = ?")
+	stmt, err := db.Prepare("DELETE FROM products WHERE id = ?")
 	if err != nil {
 		return err
 	}
